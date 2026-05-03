@@ -38,7 +38,7 @@ const events = [
       image_2 : "./assets/images/1-2.webp",
       image_3 : "./assets/images/1-3.webp",
     },
-    route: "/event.html?id=1",
+    route: "/my-homework/event.html?id=1",
   },
 
   {
@@ -71,7 +71,7 @@ const events = [
       image_2 : "./assets/images/2-2.webp",
       image_3 : "./assets/images/2-3.webp",
     },
-    route: "/event.html?id=2",
+    route: "/my-homework/event.html?id=2",
   },
 
   {
@@ -102,7 +102,7 @@ const events = [
       image_2 : "./assets/images/3-2.webp",
       image_3 : "./assets/images/3-3.webp",
     },
-    route: "/event.html?id=3",
+    route: "/my-homework/event.html?id=3",
   },
 
   {
@@ -130,7 +130,7 @@ const events = [
       image_2 : "./assets/images/4-2.webp",
       image_3 : "./assets/images/4-3.webp",
     },
-    route: "/event.html?id=4",
+    route: "/my-homework/event.html?id=4",
   },
 
   {
@@ -153,7 +153,7 @@ const events = [
       image_2 : "./assets/images/5-2.webp",
       image_3 : "./assets/images/5-3.webp",
     },
-    route: "/event.html?id=5",
+    route: "/my-homework/event.html?id=5",
   },
 
   {
@@ -174,7 +174,7 @@ const events = [
       image_2 : "./assets/images/6-2.webp",
       image_3 : "./assets/images/6-3.webp",
     },
-    route: "/event.html?id=6",
+    route: "/my-homework/event.html?id=6",
   },
 
   {
@@ -195,7 +195,7 @@ const events = [
       image_2 : "./assets/images/7-2.webp",
       image_3 : "./assets/images/7-3.webp",
     },
-    route: "/event.html?id=7",
+    route: "/my-homework/event.html?id=7",
   },
 
   {
@@ -216,7 +216,7 @@ const events = [
       image_2 : "./assets/images/8-2.webp",
       image_3 : "./assets/images/8-3.webp",
     },
-    route: "/event.html?id=8",
+    route: "/my-homework/event.html?id=8",
   },
 
   {
@@ -237,7 +237,7 @@ const events = [
       image_2 : "./assets/images/9-2.webp",
       image_3 : "./assets/images/9-3.webp",
     },
-    route: "/event.html?id=9",
+    route: "/my-homework/event.html?id=9",
   },
 
   {
@@ -258,7 +258,7 @@ const events = [
       image_2 : "./assets/images/10-2.webp",
       image_3 : "./assets/images/10-3.webp",
     },
-    route: "/event.html?id=10",
+    route: "/my-homework/event.html?id=10",
   },
 ];
 /**
