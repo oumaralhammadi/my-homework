@@ -38,7 +38,7 @@ const events = [
       image_2 : "./assets/images/1-2.webp",
       image_3 : "./assets/images/1-3.webp",
     },
-    route: "/my-homework/event.html?id=1",
+    route: "/event.html?id=1",
   },
 
   {
@@ -71,7 +71,7 @@ const events = [
       image_2 : "./assets/images/2-2.webp",
       image_3 : "./assets/images/2-3.webp",
     },
-    route: "/my-homework/event.html?id=2",
+    route: "/event.html?id=2",
   },
 
   {
@@ -102,7 +102,7 @@ const events = [
       image_2 : "./assets/images/3-2.webp",
       image_3 : "./assets/images/3-3.webp",
     },
-    route: "/my-homework/event.html?id=3",
+    route: "/event.html?id=3",
   },
 
   {
@@ -130,7 +130,7 @@ const events = [
       image_2 : "./assets/images/4-2.webp",
       image_3 : "./assets/images/4-3.webp",
     },
-    route: "/my-homework/event.html?id=4",
+    route: "/event.html?id=4",
   },
 
   {
@@ -153,7 +153,7 @@ const events = [
       image_2 : "./assets/images/5-2.webp",
       image_3 : "./assets/images/5-3.webp",
     },
-    route: "/my-homework/event.html?id=5",
+    route: "/event.html?id=5",
   },
 
   {
@@ -174,7 +174,7 @@ const events = [
       image_2 : "./assets/images/6-2.webp",
       image_3 : "./assets/images/6-3.webp",
     },
-    route: "/my-homework/event.html?id=6",
+    route: "/event.html?id=6",
   },
 
   {
@@ -195,7 +195,7 @@ const events = [
       image_2 : "./assets/images/7-2.webp",
       image_3 : "./assets/images/7-3.webp",
     },
-    route: "/my-homework/event.html?id=7",
+    route: "/event.html?id=7",
   },
 
   {
@@ -216,7 +216,7 @@ const events = [
       image_2 : "./assets/images/8-2.webp",
       image_3 : "./assets/images/8-3.webp",
     },
-    route: "/my-homework/event.html?id=8",
+    route: "/event.html?id=8",
   },
 
   {
@@ -237,7 +237,7 @@ const events = [
       image_2 : "./assets/images/9-2.webp",
       image_3 : "./assets/images/9-3.webp",
     },
-    route: "/my-homework/event.html?id=9",
+    route: "/event.html?id=9",
   },
 
   {
@@ -258,7 +258,7 @@ const events = [
       image_2 : "./assets/images/10-2.webp",
       image_3 : "./assets/images/10-3.webp",
     },
-    route: "/my-homework/event.html?id=10",
+    route: "/event.html?id=10",
   },
 ];
 /**
@@ -294,7 +294,7 @@ window.renderSlider = function () {
               <span class="badge">${e.cat[lang]}</span>
               <h3>${e.title[lang]}</h3>
               <p>${e.desc[lang]}</p>
-              <a class="btn w-100 mt-3" href="${e.route}">
+              <a class="btn w-100 mt-3" href="/my-homework/${e.route}">
                 ${lang === "ar" ? "التفاصيل" : "Details"}
               </a>
             </div>
@@ -512,7 +512,7 @@ function renderEvents() {
             <span class="badge mb-2">${e.cat[lang]}</span>
 
             <h5 class="fw-bold">
-              <a href="${e.route}">${e.title[lang]}</a>
+              <a href="/my-homework/${e.route}">${e.title[lang]}</a>
             </h5>
 
             <p class="small">${e.desc[lang]}</p>
@@ -522,7 +522,7 @@ function renderEvents() {
               <span><i class="fa-solid fa-location-dot me-1"></i> ${e.location[lang]}</span>
             </div>
 
-            <a class="btn w-100 mt-3" href="${e.route}">
+            <a class="btn w-100 mt-3" href="/my-homework/${e.route}">
               ${lang === "ar" ? "التفاصيل" : "Details"}
             </a>
 
@@ -699,7 +699,7 @@ function renderEventDetails() {
                         <span><i class="fa-regular fa-calendar me-1"></i> ${e.date[lang]}</span>
                         <span><i class="fa-solid fa-location-dot me-1"></i> ${e.location[lang]}</span>
                       </div>
-                      <a class="btn w-100 mt-3" href="${e.route}">
+                      <a class="btn w-100 mt-3" href="/my-homework/${e.route}">
                         ${lang === "ar" ? "التفاصيل" : "Details"}
                       </a>
                   </div>
