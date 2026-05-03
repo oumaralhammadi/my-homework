@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="titlePage.contact">Events Guide | Contact Us</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/styles.css"  rel="stylesheet"/>
+
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container con-nav">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-party-horn"></i></div>
+            <div class="logo-text">
+              <div class="logo-title" data-lang="nav.brand">Events Guide</div>
+              <div class="logo-subtitle" data-lang="nav.subtitle">Your events start here</div>
+            </div>
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-lang="nav.home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="events.html" data-lang="nav.events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-lang="nav.about" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link activ-nav" href="contact.html" data-lang="nav.contact">Contact</a>
+            </li>
+          </ul>
+          <div  class="d-flex align-items-center">
+            <button class="btn-nav btn-outline-light btn-sm mx-2" id="languageToggle"  onclick="toggleLanguage()">
+                <i class="fas fa-language me-1"></i>
+                <span class="lang-text">العربية</span>
+            </button>
+            <button class="btn-nav btn-outline-light btn-toggle " onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-sections">
+        <div class="bg-shapes">
+            <span class="circle c1"></span>
+            <span class="circle c2"></span>
+            <span class="circle c3"></span>
+        </div>
+        <div class="container hero-sections-content">
+            <div class="d-flex align-items-center justify-content-between flex-row">
+                <div class="badge" data-lang="contact.hero.badge">Contact Us</div>
+            </div>
+            <div>
+                <h1 data-lang="contact.hero.title">Get in Touch with Us</h1>
+                <p data-lang="contact.hero.desc">Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-content py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold text-color" data-lang="contact.title"> Contact Us </h2>
+
+        <div class="row g-4 align-items-stretch">
+
+          <!-- FORM -->
+          <div class="col-lg-6">
+            <div class="card shadow-sm border-0 p-4 h-100">
+              <div id="alert"></div>
+
+              <form onsubmit="return validateForm();">
+                
+                <div class="mb-3">
+                  <label for="name" class="form-label fw-semibold"  data-lang="contact.form.name">Name</label>
+                  <input type="text" class="form-control form-control-lg"  id="name" data-lang="contact.form.nameplaceholder" placeholder="Enter your name">
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-semibold" data-lang="contact.form.email">Email</label>
+                  <input type="email" class="form-control form-control-lg" id="email" data-lang="contact.form.emailplaceholder" placeholder="Enter your email">
+                </div>
+
+                <div class="mb-3">
+                  <label for="category" class="form-label fw-semibold" data-lang="contact.form.category">Category</label>
+                  <select class="form-select form-select-lg mt-2" id="categorySelect">
+                    <option value="" disabled selected data-lang="contact.form.categoryplaceholder">Select a category</option>
+                    <option value="general" data-lang="contact.form.category.general">General Inquiry</option>
+                    <option value="feedback" data-lang="contact.form.category.feedback">Feedback</option>
+                    <option value="support" data-lang="contact.form.category.support">Support</option>
+                    <option value="partnership" data-lang="contact.form.category.partnership">Partnership</option>
+                  </select>  
+                </div>
+
+                <div class="mb-3">
+                  <label for="msg" class="form-label fw-semibold" data-lang="contact.form.message">Message</label>
+                  <textarea class="form-control" id="msg" rows="5" data-lang="contact.form.messageplaceholder" placeholder="Enter your message"></textarea>
+                </div>
+
+                <button class="btn w-100 py-2 fw-bold" data-lang="contact.form.send">
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div class="col-lg-6">
+            <div class="row g-3 h-100">
+
+              <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0 p-4 h-100">
+                  <i class="bi bi-geo-alt-fill text-color fs-2 mb-3"></i>
+                  <h6 class="fw-bold" data-lang="contact_info.address">Address</h6>
+                  <p class="mb-0" data-lang="contact_info.address_info">Syria, Damascus</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0 p-4 h-100">
+                  <i class="bi bi-telephone-fill text-color fs-2 mb-3"></i>
+                  <h6 class="fw-bold" data-lang="contact_info.phone">Phone</h6>
+                  <p class="mb-0">+963 980 297 035</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0 p-4 h-100">
+                  <i class="bi bi-envelope-fill text-color fs-2 mb-3"></i>
+                  <h6 class="fw-bold" data-lang="contact_info.email">Email</h6>
+                  <p class="mb-0">SVUevents@university.org</p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0 p-4 h-100">
+                  <i class="bi bi-clock-fill text-color fs-2 mb-3"></i>
+                  <h6 class="fw-bold" data-lang="contact_info.hours">Working Hours</h6>
+                  <p class="mb-0" data-lang="contact_info.hours_info">9 AM - 5 PM</p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="card shadow-sm border-0 p-3 h-100">
+                  <h6 class="fw-bold" data-lang="contact_info.social.follow">Follow Us</h6>
+                    <ul class="list-unstyled m-0">
+                        <li class="mb-2">
+                            <a href="#" class="text-decoration-none fs-4 ">
+                                <i class="fab fa-facebook-f text-color fs-4  me-2"></i>
+                                <span data-lang="contact_info.social.facebook">facebook</span>
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-decoration-none fs-4 ">
+                                <i class="fab fa-twitter text-color fs-4  me-2"></i>
+                                <span data-lang="contact_info.social.twitter">twitter</span>
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-decoration-none fs-4 ">
+                                <i class="fab fa-instagram text-color fs-4  me-2"></i>
+                                <span data-lang="contact_info.social.instagram">instagram</span>
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="#" class="text-decoration-none fs-4">
+                                <i class="fab fa-linkedin-in text-color fs-4 me-2"></i>
+                                <span data-lang="contact_info.social.linkedin">linkedin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+
+          <!-- ABOUT -->
+          <div class="col-md-4 mb-4">
+            <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-party-horn"></i></div>
+            <div class="logo-text">
+              <div class="logo-title" data-lang="nav.brand">Events Guide</div>
+              <div class="logo-subtitle" data-lang="nav.subtitle">Your events start here</div>
+            </div>
+          </div>
+
+            <p class="small mt-3" data-lang="footer.about.desc">
+              The Virtual University showcases the latest academic events such as seminars, workshops, and training courses, with easy access to follow and participate.
+            </p>
+          </div>
+
+          <!-- LINKS -->
+          <div class="col-md-3 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.links.title">
+              Sections
+            </h6>
+
+            <ul class="list-unstyled">
+              <li><a href="index.html" data-lang="footer.links.home">Home</a></li>
+              <li><a href="events.html" data-lang="footer.links.events">Events</a></li>
+              <li><a href="about.html" data-lang="footer.links.about">About</a></li>
+              <li><a href="contact.html" data-lang="footer.links.contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- CITIES -->
+          <div class="col-md-2 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.cities.title">
+              Top Cities
+            </h6>
+
+            <ul class="list-unstyled">
+              <li data-lang="city.damascus">Damascus</li>
+              <li data-lang="city.aleppo">Aleppo</li>
+              <li data-lang="city.homs">Homs</li>
+              <li data-lang="city.latakia">Latakia</li>
+            </ul>
+          </div>
+          <!-- SOCIAL MEDIA -->
+          <div class="col-md-3 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.social.title">
+              Follow Us
+            </h6>
+
+            <div class="icon-social">
+              <ul class="list-unstyled m-0">
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-facebook-f me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-twitter me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-instagram me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-linkedin-in me-2"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <!-- COPYRIGHT -->
+        <div class="text-center small text-muted">
+          <span data-lang="footer.copy">
+            © 2026 Events. All rights reserved.
+          </span>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <button onclick="scrollToTop()" id="topBtn">Top</button>
+    
+
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

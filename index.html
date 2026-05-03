@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="titlePage.home">Events Guide | Home</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/styles.css"  rel="stylesheet"/>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container con-nav">
+            <a class="navbar-brand" href="index.html">
+              <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-party-horn"></i></div>
+                <div class="logo-text">
+                  <div class="logo-title" data-lang="nav.brand">Events Guide</div>
+                  <div class="logo-subtitle" data-lang="nav.subtitle">Your events start here</div>
+                </div>
+              </div>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#nav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link activ-nav" href="index.html" data-lang="nav.home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a  class="nav-link" href="events.html" data-lang="nav.events">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html" data-lang="nav.about" >About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html" data-lang="nav.contact">Contact</a>
+                </li>
+              </ul>
+              <div  class="d-flex align-items-center">
+                <button class="btn-nav btn-outline-light btn-sm mx-2" id="languageToggle"  onclick="toggleLanguage()">
+                    <i class="fas fa-language me-1"></i>
+                    <span class="lang-text">العربية</span>
+                </button>
+                <button class="btn-nav btn-outline-light btn-toggle " onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="bg-shapes">
+          <span class="circle c1"></span>
+          <span class="circle c2"></span>
+          <span class="circle c3"></span>
+        </div>
+
+        <div class="container hero-content">
+          <div class="badge" data-lang="home.hero.badge">University Events</div>
+
+          <h1 data-lang="home.hero.title">
+            Discover Syrian Virtual University Events
+          </h1>
+
+          <p data-lang="home.hero.desc">
+            Whether you are looking for diverse events, art and technology exhibitions, seminars and conferences, or workshops, you will find everything that interests you here.
+          </p>
+
+          <a class="btn btn-primary" data-lang="home.hero.cta" href="#events">
+            <i class="fa-solid fa-calendar-days me-2"></i>
+              Explore Now
+          </a>
+          <div class="d-flex flex-column align-items-center mt-4 ">
+            <h2 class="text-color" data-lang="home.hero.student">student</h2>
+            <div class="d-flex flex-row align-items-center">
+              <span class="d-flex flex-column align-items-center">
+                <span class="mx-2">عمر ابراهيم الحمادي</span>
+                <span class="mx-2">omar_309463</span>
+              </span>
+              <span class="d-flex flex-column align-items-center">
+                <span class="mx-2">حلا المهند تامر</span>
+                <span class="mx-2">hala_301266</span>
+              </span>
+              <span class="d-flex flex-column align-items-center">
+                <span class="mx-2">جاندي خليل سمو</span>
+                <span class="mx-2">jandi_284896</span>
+              </span>
+              <span class="d-flex flex-column align-items-center">
+                <span class="mx-2">محمود عبدالعزير الخليل</span>
+                <span class="mx-2">mahmod_203526</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slider -->
+      <div class="slider-events">
+        <div class="badge" data-lang="home.slider.badge">Featured Events</div>
+        <div class="container">
+          <h1 
+          data-lang="home.slider.title">
+            Featured Events This Week
+          </h1>
+          <div style="position: relative;">
+            <!-- Div Content Slider -->
+            <div class="slideshow-container" id="sliderContainer"></div>
+            <a class="prev" onclick="prevSlide()">❮</a>
+            <a class="next" onclick="nextSlide()">❯</a>     
+          </div>
+          <!-- Div Content Dots -->
+          <div style="text-align:center;margin-top: 20px;" id="dotsContainer"></div>
+        </div>
+      </div>
+      <!-- FILTERS -->
+      <div class="filters">
+        <section  class="container text-center">
+            <div class="badge" data-lang="home.filter.badge">Quick Search</div>
+            <h1 data-lang="home.filter.title" >Search for events</h1>
+            <p data-lang="home.filter.subtitle">Categories and sections for quick search</p>
+
+            <button class="btn filter-btn mb-3" value="all" data-lang="home.filter.category.all">all</button>
+            <button class="btn filter-btn mb-3" value="music" data-lang="home.filter.category.music">music</button>
+            <button class="btn filter-btn mb-3" value="tech" data-lang="home.filter.category.tech">tech</button>
+            <button class="btn filter-btn mb-3" value="culture" data-lang="home.filter.category.culture">culture</button>
+            <button class="btn filter-btn mb-3" value="sport" data-lang="home.filter.category.sport">sport</button>
+            <button class="btn filter-btn mb-3" value="volunteer" data-lang="home.filter.category.volunteer">volunteer</button>
+            <button class="btn filter-btn mb-3" value="workshop" data-lang="home.filter.category.workshop">workshop</button>
+            <button class="btn filter-btn mb-3" value="business" data-lang="home.filter.category.business">business</button>
+            <button class="btn filter-btn mb-3" value="exhibition" data-lang="home.filter.category.exhibition">exhibition</button>
+            <button class="btn filter-btn mb-3" value="seminar" data-lang="home.filter.category.seminar">seminar</button>
+
+
+          </section>
+
+        <!-- EVENTS -->
+          <section id="events" class="container my-5">
+            <div id="eventsContainer" class="container my-4">
+              <div class="row g-4"></div>
+            </div>
+          </section>
+      </div>
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+
+          <!-- ABOUT -->
+          <div class="col-md-4 mb-4">
+            <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-party-horn"></i></div>
+            <div class="logo-text">
+              <div class="logo-title" data-lang="nav.brand">Events Guide</div>
+              <div class="logo-subtitle" data-lang="nav.subtitle">Your events start here</div>
+            </div>
+          </div>
+
+            <p class="small mt-3" data-lang="footer.about.desc">
+              The Virtual University showcases the latest academic events such as seminars, workshops, and training courses, with easy access to follow and participate.
+            </p>
+          </div>
+
+          <!-- LINKS -->
+          <div class="col-md-3 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.links.title">
+              Sections
+            </h6>
+
+            <ul class="list-unstyled">
+              <li><a href="index.html" data-lang="footer.links.home">Home</a></li>
+              <li><a href="events.html" data-lang="footer.links.events">Events</a></li>
+              <li><a href="about.html" data-lang="footer.links.about">About</a></li>
+              <li><a href="contact.html" data-lang="footer.links.contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- CITIES -->
+          <div class="col-md-2 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.cities.title">
+              Top Cities
+            </h6>
+
+            <ul class="list-unstyled">
+              <li data-lang="city.damascus">Damascus</li>
+              <li data-lang="city.aleppo">Aleppo</li>
+              <li data-lang="city.homs">Homs</li>
+              <li data-lang="city.latakia">Latakia</li>
+            </ul>
+          </div>
+          <!-- SOCIAL MEDIA -->
+          <div class="col-md-3 mb-4">
+            <h6 class="text-color fw-bold" data-lang="footer.social.title">
+              Follow Us
+            </h6>
+
+            <div class="icon-social">
+              <ul class="list-unstyled m-0">
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-facebook-f me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-twitter me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-instagram me-2"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="text-decoration-none">
+                    <i class="fab fa-linkedin-in me-2"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <!-- COPYRIGHT -->
+        <div class="text-center small text-muted">
+          <span data-lang="footer.copy">
+            © 2026 Events. All rights reserved.
+          </span>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <button onclick="scrollToTop()" id="topBtn">Top</button>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
