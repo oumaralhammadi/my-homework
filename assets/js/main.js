@@ -284,7 +284,7 @@ window.renderSlider = function () {
               <span class="badge">${e.cat[lang]}</span>
               <h3>${e.title[lang]}</h3>
               <p>${e.desc[lang]}</p>
-              <a class="btn w-100 mt-3" href="/event.html?id=${e.id}">
+              <a class="btn w-100 mt-3" href="event.html?id=${e.id}">
                 ${lang === "ar" ? "التفاصيل" : "Details"}
               </a>
             </div>
@@ -502,7 +502,7 @@ function renderEvents() {
             <span class="badge mb-2">${e.cat[lang]}</span>
 
             <h5 class="fw-bold">
-              <a href="/event.html?id=${e.id}">${e.title[lang]}</a>
+              <a href="event.html?id=${e.id}">${e.title[lang]}</a>
             </h5>
 
             <p class="small">${e.desc[lang]}</p>
@@ -512,7 +512,7 @@ function renderEvents() {
               <span><i class="fa-solid fa-location-dot me-1"></i> ${e.location[lang]}</span>
             </div>
 
-            <a class="btn w-100 mt-3" href="/event.html?id=${e.id}">
+            <a class="btn w-100 mt-3" href="event.html?id=${e.id}">
               ${lang === "ar" ? "التفاصيل" : "Details"}
             </a>
 
@@ -689,7 +689,7 @@ function renderEventDetails() {
                         <span><i class="fa-regular fa-calendar me-1"></i> ${e.date[lang]}</span>
                         <span><i class="fa-solid fa-location-dot me-1"></i> ${e.location[lang]}</span>
                       </div>
-                      <a class="btn w-100 mt-3" href="/event.html?id=${e.id}">
+                      <a class="btn w-100 mt-3" href="event.html?id=${e.id}">
                         ${lang === "ar" ? "التفاصيل" : "Details"}
                       </a>
                   </div>
